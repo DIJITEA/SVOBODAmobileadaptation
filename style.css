@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "GothamSSm-XLight";
+  src: url("fonts/GothamSSm-XLight.eot");
+  src: url("fonts/GothamSSm-XLight.eot?#iefix") format("embedded-opentype"),
+    url("fonts/GothamSSm-XLight.ttf") format("truetype"),
+    url("fonts/GothamSSm-XLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "VCROSDMono";
+  src: url("./fonts/VCROSDMONO1001.eot");
+  src: url("./fonts/VCROSDMONO1001.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/VCROSDMONO1001.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0px;
+}
+
+ul{
+  padding: 0%;
+  margin: 0%;
+}
+li {
+  list-style-type: none; 
+ }
+ .backmovement {
+  background-image: url("sourse/Bart2.svg");
+  background-size: contain;
+  animation: move 150s linear infinite;
+}
+.backmovement2 {
+  background-image: url("sourse/Bart2.svg");
+  background-size: contain;
+  animation: move2 150s linear infinite;
+}
+
+.background {
+  position: absolute;
+  top: 20%;
+  height: 80%;
+  width: 100%;
+  background-color: #000000;
+  margin: 0px;
+}
+.background .center {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.background h {
+  font-size: 8vh;
+  font-family: "GothamSSm-XLight";
+  color: rgb(255, 255, 255);
+}
+.background h1 {
+  text-align: center;
+  margin: 0;
+
+  letter-spacing: 1.1vh;
+  font-size: 2vh;
+  font-family: "GothamSSm-XLight";
+  color: rgb(255, 255, 255);
+}
+.background h2 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 2vh;
+  font-family: "VCROSDMono";
+  color: rgb(255, 255, 255);
+}
+
+.wline {
+  position: absolute;
+  top: 10%;
+  height: 13%;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0px;
+  transform: translateY(-50%);
+}
+.wline2 {
+  position: absolute;
+  top: 50%;
+  height: 13%;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0px;
+  transform: translateY(-50%);
+}
+.bartclass{
+
+  width: 20%;
+}
+ul.lis{
+  position: absolute;
+  bottom: 5%;
+ /* left: 50%;
+  transform: translate(-50%, -50%); */
+  font-size: 6.5vh;
+  font-family: "GothamSSm-XLight";
+  
+}
+
+
+ul.lis li a {
+  color: white;
+  
+}
+
+
+
+.hat {
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  background-color: #000000;
+  margin: 0px;
+}
+.menubut {
+  position: absolute;
+  width: 15%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+
+.active {
+  position: absolute;
+  right: 0%;
+  
+}
+.nonactive{
+  position: absolute;
+  right: 100%;
+ 
+}
+
+.active2 {
+  position: fixed;
+  top: -5%;
+  right: -34%;
+  
+}
+.nonactive2 {
+  position: absolute;
+  right: 100%;
+ 
+}
+.active3 {
+  position: fixed;
+  top: 52%;
+  right: -34%;
+  
+  
+}
+.nonactive3 {
+  position: absolute;
+  right: 100%;
+ 
+}
+
+.slide{
+  position: absolute;
+  top: 0%;
+  
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  margin: 0px;
+  z-index: 1;
+
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; 
+}
+.backimg{
+ 
+  
+  width: 164%;
+ 
+
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; 
+}
+.backimg2{
+ 
+  
+  width: 182%;
+ 
+
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; 
+}
+
+@keyframes move {
+  from {
+    background-position: -3840px 100%, 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+@keyframes move2 {
+  from {
+    background-position: 3840px 100%, 0 0;
+  }
+  to {
+    background-position: 0 100%;
+  }
+}
+.backblack{position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
