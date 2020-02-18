@@ -43,7 +43,7 @@ li {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 20%;
   height: 80%;
   width: 100%;
@@ -144,7 +144,8 @@ div.lis div a {
   
 }
 .nonactive{
-  position: absolute;
+  position: fixed;
+  top: -5%;
   right: 100%;
  
 }
