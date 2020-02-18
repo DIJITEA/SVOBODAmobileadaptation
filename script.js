@@ -12,3 +12,6 @@ document.getElementById("playbutton4").classList.toggle("active3");
 document.getElementById("playbutton4").classList.toggle("nonactive3");
 }
 
+function test(){
+    alert("test");
+}
