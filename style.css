@@ -129,9 +129,9 @@ div.lis div a {
   margin: 0px;
 }
 .menubut {
-  position: absolute;
+  position: fixed;
   width: 15%;
-  top: 50%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 1;
