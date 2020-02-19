@@ -24,14 +24,14 @@ body {
   margin: 0px;
 }
 
-ul{
+ul {
   padding: 0%;
   margin: 0%;
 }
 li {
-  list-style-type: none; 
- }
- .backmovement {
+  list-style-type: none;
+}
+.backmovement {
   background-image: url("sourse/Bart2.svg");
   background-size: contain;
   animation: move 150s linear infinite;
@@ -43,10 +43,14 @@ li {
 }
 
 .background {
-  position: fixed;
-  top: 20%;
-  height: 80%;
-  width: 100%;
+  position: relative;
+  height: 80vh;
+  background-color: #000000;
+  margin: 0px;
+}
+.background2 {
+  position: relative;
+  height: 100vh;
   background-color: #000000;
   margin: 0px;
 }
@@ -54,7 +58,7 @@ li {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 .background h {
   font-size: 8vh;
@@ -99,85 +103,72 @@ li {
   margin: 0px;
   transform: translateY(-50%);
 }
-.bartclass{
-
+.bartclass {
   width: 20%;
 }
-div.lis{
-  position: absolute;
-  bottom: 15%;
- /* left: 50%;
-  transform: translate(-50%, -50%); */
+div.lis {
+  position: relative;
+  bottom: -25vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 6.5vh;
   font-family: "GothamSSm-XLight";
-  
 }
-
 
 div.lis div a {
   color: white;
-  
-}
-
-
+} 
 
 .hat {
-  position: absolute;
-  height: 20%;
-  width: 100%;
+  position: relative;
+  height: 20vh;
+
   background-color: #000000;
   margin: 0px;
 }
+
 .menubut {
-  position: fixed;
-  width: 15%;
-  top: 10%;
+  position: relative;
+  width: 10vh;
+  top: 10vh;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
-
 
 .active {
   position: absolute;
   right: 0%;
-  
 }
-.nonactive{
+.nonactive {
   position: fixed;
   top: -5%;
   right: 100%;
- 
 }
 
-.active2 {
+/* .active2 {
   position: fixed;
   top: -5%;
   right: -34%;
-  
 }
 .nonactive2 {
   position: absolute;
   right: 100%;
- 
 }
 .active3 {
   position: fixed;
   top: 52%;
   right: -34%;
-  
-  
 }
 .nonactive3 {
   position: absolute;
   right: 100%;
- 
 }
-
-.slide{
+*/
+.slide {
   position: absolute;
   top: 0%;
-  
+
   height: 100%;
   width: 100%;
   background-color: #000000;
@@ -186,41 +177,37 @@ div.lis div a {
 
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
-  transition: all 300ms; 
+  transition: all 300ms;
 }
 .backimg{
- 
-  
-  width: 164%;
- 
-
-  -moz-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; 
+  position: absolute;
+  width: 100vh;
 }
 .backimg2{
- 
-  
-  width: 182%;
- 
+  position: relative;
+  width: 100vh;
+  z-index: 1;
+}
+/*.backimg {
+  width: 164%;
 
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
-  transition: all 300ms; 
+  transition: all 300ms;
 }
-.triger1{
-  position: fixed;
-    width: 10%;
-    height: 100%;
-    z-index: 10;
+.backimg2 {
+  width: 182%;
+
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}*/
+.backblock11{
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
 }
-.triger2{
-  position: fixed;
-  right: 50%;
-    width: 10%;
-    height: 100%;
-    z-index: 10;
-}
+
 @keyframes move {
   from {
     background-position: -3840px 100%, 0 0;
@@ -237,7 +224,8 @@ div.lis div a {
     background-position: 0 100%;
   }
 }
-.backblack{position: absolute;
+.backblack {
+  position: absolute;
   height: 100%;
   width: 100%;
   background-color: #000000;
