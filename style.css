@@ -265,6 +265,12 @@ div.lis div a {
 .posttest {
   position: relative;
 }
+.backblack {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+}
 
 @keyframes move {
   from {
@@ -282,14 +288,9 @@ div.lis div a {
     background-position: 0 100%;
   }
 }
-.backblack {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: #000000;
-}
 
-@media only screen and (min-width: 321px) {
+
+@media only screen and (min-width: 321px) and (orientation: landscape) {
   .backimg {
     position: absolute;
     width: 230vh;
@@ -306,7 +307,7 @@ div.lis div a {
     bottom: -25vh;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 10.5vh;
+    font-size: 6.5vh;
     font-family: "GothamSSm-XLight";
   }
   .buttonposition {
@@ -323,6 +324,11 @@ div.lis div a {
     transform: translate(0, 50%);
     font-size: 10vh;
   }
+  .backblock11 {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .backimg {
