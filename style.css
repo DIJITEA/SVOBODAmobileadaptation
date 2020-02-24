@@ -16,6 +16,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "DIT";
+  src: url("./fonts/DIT.eot");
+  src: url("./fonts/DIT.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/DIT.ttf") format("truetype"),
+    url("./fonts/DIT.woff") format("woff");
+  font-style: normal;
+}
 a {
   text-decoration: none;
 }
@@ -133,7 +141,26 @@ div.lis div a {
   top: 10vh;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
+  z-index: 0;
+}
+.buttonposition {
+  position: absolute;
+  width: 8vh;
+  top: 4vh;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.revbuttonhide {
+  position: absolute;
+  width: 8vh;
+  top: 0%;
+  left: -50%;
+}
+.sidebar3pos {
+  position: relative;
+  top: 25vh;
+  transform: translate(0, 50%);
 }
 
 .active {
@@ -207,6 +234,37 @@ div.lis div a {
   height: 50vh;
   overflow: hidden;
 }
+.sidebar {
+  font-family: "GothamSSm-XLight";
+  position: absolute;
+  font-size: 5vh;
+  width: 100%;
+  height: 100%;
+  top: -100vh;
+
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.activesidebar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0vh;
+  color: #ffffff;
+  background-color: #000000;
+}
+.redback {
+  position: absolute;
+  height: 100vh;
+  width: 100vh;
+  opacity: 0.3;
+  overflow: hidden;
+  background-color: red;
+}
+.posttest {
+  position: relative;
+}
 
 @keyframes move {
   from {
@@ -250,7 +308,21 @@ div.lis div a {
     transform: translate(-50%, -50%);
     font-size: 10.5vh;
     font-family: "GothamSSm-XLight";
-}
+  }
+  .buttonposition {
+    position: absolute;
+    width: 15vh;
+    top: 7vh;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .sidebar3pos {
+    position: relative;
+    top: 25vh;
+    transform: translate(0, 50%);
+    font-size: 10vh;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .backimg {
@@ -258,13 +330,18 @@ div.lis div a {
     width: 246vh;
     top: -56vh;
     left: -79vh;
-} 
- .backimg2 {
-  position: relative;
-  width: 246vh;
-  top: -56vh;
-  left: -79vh;
-  z-index: 1;
-}
-
   }
+  .backimg2 {
+    position: relative;
+    width: 246vh;
+    top: -56vh;
+    left: -79vh;
+    z-index: 1;
+  }
+  .sidebar3pos {
+    position: relative;
+    top: 25vh;
+    transform: translate(0, 50%);
+    font-size: 7vh;
+}
+}
