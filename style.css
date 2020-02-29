@@ -24,6 +24,7 @@
     url("./fonts/DIT.woff") format("woff");
   font-style: normal;
 }
+
 a {
   text-decoration: none;
 }
@@ -270,6 +271,13 @@ div.lis div a {
   height: 100%;
   width: 100%;
   background-color: #000000;
+}
+.hidediv{
+  position: absolute;
+    width: 100%;
+    height: 7vh;
+    margin: 0vh;
+    background-color: red;
 }
 
 @keyframes move {
