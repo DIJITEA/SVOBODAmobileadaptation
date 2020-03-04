@@ -1,60 +1,75 @@
-var Buttoncheck = 1;
-function playbutton(){
-  if (Buttoncheck == 1){
-  document.getElementById("hatbutton").classList.toggle("buttonposition");
-  document.getElementById("hatbutton").classList.toggle("revbuttonhide");
-  }
+
+setTimeout(Hellofix,300);
+function Hellofix(){
+    document.getElementById('fix').parentNode.removeChild(document.getElementById('fix'));
 }
-function ryukswipe(){
-document.getElementById("playbutton1").classList.toggle("active");
-document.getElementById("playbutton1").classList.toggle("nonactive");
-document.getElementById("playbutton2").classList.toggle("active2");
-document.getElementById("playbutton2").classList.toggle("nonactive2");
-setTimeout(playbutton, 100);
-
-}
-
-
-
-sessionStorage.clear('test');
-let realtimeval;
-function openmenu(){
-  Buttoncheck = 2;
-   realtimeval = val;
-
-  document.getElementById("sidebar" + realtimeval).classList.toggle("activesidebar");
-  document.getElementById("sidebar" + realtimeval).classList.toggle("nonactive");
-
-  let prevslideval = sessionStorage.getItem('test');
-  function second_phase(){
-if(prevslideval > 0 && prevslideval != realtimeval){
-
-  document.getElementById("sidebar" + prevslideval).classList.remove("activesidebar")
-  document.getElementById("sidebar" + prevslideval).classList.add("nonactive")
-}
-ryukswipe();
-  }
-setTimeout(second_phase, 300)
-
-sessionStorage.setItem('test', val); 
-
-}
-function ryukswipebacktime(){
-  document.getElementById("sidebar" + realtimeval).classList.toggle("activesidebar");
-  document.getElementById("sidebar" + realtimeval).classList.toggle("nonactive");
-}
-function ryukswipeback(){
-  if (Buttoncheck == 2){
-    ryukswipe();
-    setTimeout(ryukswipebacktime, 300)
+setTimeout(Hello,300);
+function Hello(){
+    document.getElementById('Hello1').style.opacity = 1;
+    document.getElementById('Hello1').style.top = 0 + '%';
+    setTimeout(Hello2,900);
     
-    Buttoncheck = 3;
-  }
-  else if (Buttoncheck == 3){
-    Buttoncheck = 1;
-    ryukswipe();
-  }
-  else{
-    ryukswipe();
-  }
 }
+
+function Hello2(){
+    document.getElementById('Hello1').style.opacity = 0;
+    document.getElementById('Hello1').style.top = -100 + '%';
+    setTimeout(Hello3,300);
+}
+
+function Hello3(){
+    document.getElementById('Hello2').style.opacity = 1;
+    document.getElementById('Hello2').style.top = 0 + '%';
+    setTimeout(Hello4,900);
+}
+function Hello4(){
+    document.getElementById('Hellomain').style.opacity = 0;
+    setTimeout(Hello5,300);
+}
+function Hello5(){
+    document.getElementById('Hellomain').parentNode.removeChild(document.getElementById('Hellomain'));
+    setTimeout(Homepagespawn1,300);
+}
+function Homepagespawn1(){
+    document.getElementById('Centerspawn').style.opacity = 1;
+    document.getElementById('Wline1spawn').style.width = 100 + '%';
+    document.getElementById('Wline1spawn').style.left = 0 + '%';
+    document.getElementById('Wline2spawn').style.width = 100 + '%';
+    document.getElementById('Wline2spawn').style.left = 0 + '%';
+}
+
+
+window.addEventListener('scroll', function() {
+    let cenwidth = window.innerHeight / window.innerHeight;
+    document.getElementById('Centerspawn').style.opacity = (cenwidth - (pageYOffset / window.innerHeight) * 8);
+    document.getElementById('Wline1spawn').style.opacity = (cenwidth - (pageYOffset / window.innerHeight) * 8);
+    document.getElementById('Wline2spawn').style.opacity = (cenwidth - (pageYOffset / window.innerHeight) * 8);
+    document.getElementById('BG1').style.opacity = (cenwidth - (pageYOffset / window.innerHeight) * 2);
+    document.getElementById('BG2').style.opacity = (cenwidth - (pageYOffset / window.innerHeight) * 2);
+    
+    document.getElementById('About').style.right = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 16 - 5 + '%';
+    document.getElementById('Art').style.right = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 8 - 5  + '%';
+    document.getElementById('Piercing').style.right = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 4 - 5 + '%';
+    document.getElementById('Contacts').style.right = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 2 - 5 + '%';
+
+    document.getElementById('Gifmove').style.right = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 16 +  40 +'%';
+    document.getElementById('Gifmove2').style.top = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * 16 +  50 +'%';
+    document.getElementById('Gifmove3').style.top = ((cenwidth - (pageYOffset / window.innerHeight)) * 100) * (-8) +  60 +'%';
+  });
+  
+  setInterval(freedom,400);
+  let Gifopt = 1;
+  function freedom(){
+    if (Gifopt < 9) {
+      document.getElementById('Gifop' + Gifopt).style.opacity = 1;
+      Gifopt = Gifopt + 1;
+    }
+    else{
+        while (Gifopt > 1) { 
+            document.getElementById('Gifop' + Gifopt).style.opacity = 0;
+            Gifopt = Gifopt - 1;
+          }
+    }
+  }
+ 
+  /*alert( window.innerHeight ); */

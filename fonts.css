@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "GothamSSm-XLight";
+    src: url("fonts/GothamSSm-XLight.eot");
+    src: url("fonts/GothamSSm-XLight.eot?#iefix") format("embedded-opentype"),
+      url("fonts/GothamSSm-XLight.ttf") format("truetype"),
+      url("fonts/GothamSSm-XLight.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "VCROSDMono";
+    src: url("./fonts/VCROSDMONO1001.eot");
+    src: url("./fonts/VCROSDMONO1001.eot?#iefix") format("embedded-opentype"),
+      url("./fonts/VCROSDMONO1001.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .secondpagefonts{
+    position: relative;
+    font-family: "GothamSSm-XLight";
+    font-size: 12vw;
+  }
+  .secondpagemnpos{
+    position: absolute;
+    bottom: 20%;
+  }
