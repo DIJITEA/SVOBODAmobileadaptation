@@ -49,8 +49,8 @@ window.addEventListener('scroll', function() {
         scrollfix();
     }
     else{
-        scrollfix();
         peny = window.innerHeight; 
+        scrollfix(); 
     }
     function scrollfix(){
       
