@@ -45,7 +45,7 @@ window.addEventListener('scroll', function() {
     let cenwidth = window.innerHeight / window.innerHeight;
     let cent = window.innerHeight;
     let peny = pageYOffset;
-    if(peny <= cent ){
+    if(peny < cent ){
         scrollfix();
     }
     else{
