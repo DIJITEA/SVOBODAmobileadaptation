@@ -48,14 +48,22 @@ window.addEventListener('scroll', function() {
       }
   });
 
+  let timerper = 0;
+  let nullpos = window.innerHeight / 100;
   function scrolldown(){
-   
-      let timerId = setInterval(() => scrollop(), 0010);
-      setTimeout(() => { clearInterval(timerId);}, 1000);
+    if (timerper < 100){
+    setTimeout(scrollop,0010);
+    }
+    else{
+        timerper = 0;
+    }
   }
   function scrollop(){
-    let nullpos = window.innerHeight / 100;
+
     window.scrollBy(0,nullpos * 2);
+    timerper = timerper + 1;
+    scrolldown();
+    
   }
 
   setInterval(freedom,400);
