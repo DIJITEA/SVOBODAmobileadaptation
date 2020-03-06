@@ -1,4 +1,6 @@
-document.body.onload = function(){
+let img = document.createElement('img');
+img.src = "./source/sg.gif";
+img.onload = function(){
     setTimeout(function(){
         var preloader = document.getElementById('page-preloader');
         if (!preloader.classList.contains('done')){
