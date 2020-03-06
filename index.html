@@ -8,9 +8,13 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
+  
 
 </head>
 <body>
+  <div id="page-preloader" class="preloader" >
+    <div class="loader"></div>
+  </div>
     <div id="fix" class="opac">
 
     </div>
@@ -66,21 +70,43 @@
       </div>
        <div class="secondpagecon2">
          <div class="secondpagemnpos">
-           <div id="About" class="secondpagefonts">
+           <div onclick="opensidebar(val='About')" id="About" class="secondpagefonts">
              О НАС
            </div>
-           <div id="Art" class="secondpagefonts">
+           <div onclick="opensidebar(val='Art')" id="Art" class="secondpagefonts">
              РАБОТЫ
            </div>
-           <div id="Piercing" class="secondpagefonts">
+           <div onclick="opensidebar(val='Piercing')" id="Piercing" class="secondpagefonts">
              ПИРСИНГ
            </div>
-           <div id="Contacts" class="secondpagefonts">
+           <div onclick="opensidebar(val='Contacts')" id="Contacts" class="secondpagefonts">
              КОНТАКТЫ
            </div>
       </div>
      </div>
+
+     <div id="SideAbout" class="slidebar done">
+       <div onclick="opensidebar()" class="sidebarhat"></div>
+       <div class="sidebarmain">About</div>
+     </div>
+
+     <div id="SideArt" class="slidebar done">
+      <div onclick="opensidebar()" class="sidebarhat"></div>
+      <div class="sidebarmain">Art</div>
+    </div>
+
+    <div id="SidePiercing" class="slidebar done">
+      <div onclick="opensidebar()" class="sidebarhat"></div>
+      <div class="sidebarmain">Piercing</div>
+    </div>
+
+    <div id="SideContacts" class="slidebar done">
+      <div onclick="opensidebar()" class="sidebarhat"></div>
+      <div class="sidebarmain">Contacts</div>
+    </div>
+
     </div>
     </div>
+    <script src="preloader.js"></script>
 </body>
 </html>

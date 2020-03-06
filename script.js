@@ -1,35 +1,10 @@
 
+
 setTimeout(Hellofix,300);
 function Hellofix(){
     document.getElementById('fix').parentNode.removeChild(document.getElementById('fix'));
 }
-setTimeout(Hello,300);
-function Hello(){
-    document.getElementById('Hello1').style.opacity = 1;
-    document.getElementById('Hello1').style.top = 0 + '%';
-    setTimeout(Hello2,900);
-    
-}
 
-function Hello2(){
-    document.getElementById('Hello1').style.opacity = 0;
-    document.getElementById('Hello1').style.top = -100 + '%';
-    setTimeout(Hello3,300);
-}
-
-function Hello3(){
-    document.getElementById('Hello2').style.opacity = 1;
-    document.getElementById('Hello2').style.top = 0 + '%';
-    setTimeout(Hello4,900);
-}
-function Hello4(){
-    document.getElementById('Hellomain').style.opacity = 0;
-    setTimeout(Hello5,300);
-}
-function Hello5(){
-    document.getElementById('Hellomain').parentNode.removeChild(document.getElementById('Hellomain'));
-    setTimeout(Homepagespawn1,300);
-}
 function Homepagespawn1(){
     document.getElementById('Centerspawn').style.opacity = 1;
     document.getElementById('Wline1spawn').style.width = 100 + '%';
@@ -85,6 +60,11 @@ window.addEventListener('scroll', function() {
             Gifopt = Gifopt - 1;
           }
     }
+  }
+
+  function opensidebar(){
+      sessionStorage.val = val;
+      document.getElementById('Side' + sessionStorage.val).classList.toggle('done');
   }
  
   /*alert( window.innerHeight ); */

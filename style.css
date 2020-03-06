@@ -4,6 +4,46 @@
   text-decoration: none;
 }
 
+.preloader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  background: white;
+  z-index: 11;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+  
+
+}
+.loader{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  
+  background-image: url("source/loadpic.svg");
+  background-size: contain;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+  animation: 1s spin infinite linear;
+  z-index: 12;
+}
+.done{
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes spin{
+  from {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%,-50%) rotate(360deg);
+  }
+}
 
 .backblack{
   position: absolute;
@@ -204,7 +244,40 @@ overflow: hidden;
   overflow: hidden;
   z-index: 4;
 }
-
+#Gifop6{
+  color: red;
+}
+#Gifop5{
+  color: red;
+}
+.slidebar {
+  position: absolute;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  z-index: 7;
+  background-color: white;
+  overflow: hidden;
+  transition: 0.5s all;
+  font-size: 0px;
+}
+.sidebarhat {
+  position: relative;
+  height: 5vh;
+  width: 5vh;
+  left: 95%;
+  background-image: url("source/close.svg");
+  background-size: contain;
+  transform: translate(-100%, 50%);
+}
+.sidebarmain {
+  position: relative;
+  overflow: hidden;
+  top: 2.5vh;
+  height: 92.5vh;
+  width: 100vw;
+  font-size: 5vh;
+}
 
 @keyframes move {
   from {
@@ -222,3 +295,4 @@ overflow: hidden;
     background-position: 0 100%;
   }
 }
+
