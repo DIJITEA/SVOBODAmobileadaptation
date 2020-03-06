@@ -20,51 +20,33 @@ let magnet = window.innerHeight;
 window.addEventListener('scroll', function() {
     let cenwidth = window.innerHeight / window.innerHeight;
     let cent = window.innerHeight;
-    let peny = pageYOffset;
-    if(peny < (cent * 0.97)){
+    let penny = pageYOffset;
+    if(penny < (cent * 0.95)){
         scrollfix();
     }
     else{
-        peny = window.innerHeight; 
+        penny = window.innerHeight; 
         scrollfix(); 
     }
     function scrollfix(){
       
-        document.getElementById('Centerspawn').style.opacity = (cenwidth - (peny / window.innerHeight) * 8);
-        document.getElementById('Wline1spawn').style.opacity = (cenwidth - (peny / window.innerHeight) * 8);
-        document.getElementById('Wline2spawn').style.opacity = (cenwidth - (peny / window.innerHeight) * 8);
-        document.getElementById('BG1').style.opacity = (cenwidth - (peny / window.innerHeight) * 4);
-        document.getElementById('BG2').style.opacity = (cenwidth - (peny / window.innerHeight) * 4);
+        document.getElementById('Centerspawn').style.opacity = (cenwidth - (penny / window.innerHeight) * 8);
+        document.getElementById('Wline1spawn').style.opacity = (cenwidth - (penny / window.innerHeight) * 8);
+        document.getElementById('Wline2spawn').style.opacity = (cenwidth - (penny / window.innerHeight) * 8);
+        document.getElementById('BG1').style.opacity = (cenwidth - (penny / window.innerHeight) * 4);
+        document.getElementById('BG2').style.opacity = (cenwidth - (penny / window.innerHeight) * 4);
         
-        document.getElementById('About').style.right = ((cenwidth - (peny / window.innerHeight)) * 100) * 16 - 5 + '%';
-        document.getElementById('Art').style.right = ((cenwidth - (peny / window.innerHeight)) * 100) * 8 - 5  + '%';
-        document.getElementById('Piercing').style.right = ((cenwidth - (peny / window.innerHeight)) * 100) * 4 - 5 + '%';
-        document.getElementById('Contacts').style.right = ((cenwidth - (peny / window.innerHeight)) * 100) * 2 - 5 + '%';
+        document.getElementById('About').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 16 - 5 + '%';
+        document.getElementById('Art').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 8 - 5  + '%';
+        document.getElementById('Piercing').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 4 - 5 + '%';
+        document.getElementById('Contacts').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 2 - 5 + '%';
     
-        document.getElementById('Gifmove').style.right = ((cenwidth - (peny / window.innerHeight)) * 100) + 40 +'%';
-        document.getElementById('Gifmove2').style.top = ((cenwidth - (peny / window.innerHeight)) * 100) + 50 +'%';
-        document.getElementById('Gifmove3').style.top = (-(cenwidth - (peny / window.innerHeight)) * 100) + 60 +'%';
+        document.getElementById('Gifmove').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) + 40 +'%';
+        document.getElementById('Gifmove2').style.top = ((cenwidth - (penny / window.innerHeight)) * 100) + 50 +'%';
+        document.getElementById('Gifmove3').style.top = (-(cenwidth - (penny / window.innerHeight)) * 100) + 60 +'%';
     
       }
   });
-
-  let timerper = 0;
-  let nullpos = window.innerHeight / 100;
-  function scrolldown(){
-    if (timerper < 100){
-    setTimeout(scrollop,0010);
-    }
-    else{
-        timerper = 0;
-    }
-  }
-  function scrollop(){
-
-    window.scrollBy(0,nullpos * 2);
-    timerper = timerper + 1;
-    scrolldown();
-    
-  }
 
   setInterval(freedom,400);
   let Gifopt = 1;
@@ -86,5 +68,13 @@ window.addEventListener('scroll', function() {
       document.getElementById('Side' + sessionStorage.val).classList.toggle('done');
       document.body.classList.toggle('stopscroll');
   }
- 
+
+  window.onload = function(){
+  var hiddenElement = document.getElementById("About");
+  var btn = document.querySelector('.downa');
+  function Godown() {
+    hiddenElement.scrollIntoView({behavior: "smooth"});
+  }
+  btn.addEventListener('click', Godown);
+ }
   /*alert( window.innerHeight ); */
