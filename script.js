@@ -11,6 +11,7 @@ function Homepagespawn1(){
     document.getElementById('Wline1spawn').style.left = 0 + '%';
     document.getElementById('Wline2spawn').style.width = 100 + '%';
     document.getElementById('Wline2spawn').style.left = 0 + '%';
+    document.body.classList.toggle('stopscroll');
 }
 
 let magnet = window.innerHeight;
@@ -47,6 +48,16 @@ window.addEventListener('scroll', function() {
       }
   });
 
+  function scrolldown(){
+   
+      let timerId = setInterval(() => scrollop(), 0010);
+      setTimeout(() => { clearInterval(timerId);}, 1000);
+  }
+  function scrollop(){
+    let nullpos = window.innerHeight / 100;
+    window.scrollBy(0,nullpos * 2);
+  }
+
   setInterval(freedom,400);
   let Gifopt = 1;
   function freedom(){
@@ -65,6 +76,7 @@ window.addEventListener('scroll', function() {
   function opensidebar(){
       sessionStorage.val = val;
       document.getElementById('Side' + sessionStorage.val).classList.toggle('done');
+      document.body.classList.toggle('stopscroll');
   }
  
   /*alert( window.innerHeight ); */

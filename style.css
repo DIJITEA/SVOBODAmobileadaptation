@@ -44,6 +44,9 @@
     transform: translate(-50%,-50%) rotate(360deg);
   }
 }
+.stopscroll{
+  overflow: hidden;
+}
 
 .backblack{
   position: absolute;
@@ -268,15 +271,34 @@ overflow: hidden;
   left: 95%;
   background-image: url("source/close.svg");
   background-size: contain;
-  transform: translate(-100%, 50%);
+  transform: translate(-100%, 30%);
 }
 .sidebarmain {
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
   top: 2.5vh;
   height: 92.5vh;
   width: 100vw;
   font-size: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  
+}
+.instpos {
+  position: relative;
+  width: 50vmin;
+  height: 50vmin;
+  margin: 0px;
+  padding: 0px;
+  
+  overflow: hidden;
+}
+.photosource {
+  position: relative;
+  width: 50vmin;
+  bottom: 6vh;
+  overflow: hidden;
 }
 
 @keyframes move {
