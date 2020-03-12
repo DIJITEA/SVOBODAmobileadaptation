@@ -15,19 +15,30 @@ function Homepagespawn1(){
 }
 
 let magnet = window.innerHeight;
+let orientv = 0;
+let orientv2 = 0;
 
+window.addEventListener("orientationchange", function() {
+  orientv  = screen.orientation.angle / 18;
+  orientv2  = screen.orientation.angle / (9 / 2);
+});
 
 window.addEventListener('scroll', function() {
     let cenwidth = window.innerHeight / window.innerHeight;
     let cent = window.innerHeight;
     let penny = pageYOffset;
-    if(penny < (cent * 0.95)){
-        scrollfix();
+ 
+
+    if(penny < (cent * 0.97)){
+      scrollfix();
+   
     }
     else{
         penny = window.innerHeight; 
-        scrollfix(); 
+        scrollfix();
+       
     }
+   
     function scrollfix(){
       
         document.getElementById('Centerspawn').style.opacity = (cenwidth - (penny / window.innerHeight) * 8);
@@ -40,13 +51,14 @@ window.addEventListener('scroll', function() {
         document.getElementById('Art').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 8 - 5  + '%';
         document.getElementById('Piercing').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 4 - 5 + '%';
         document.getElementById('Contacts').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) * 2 - 5 + '%';
-    
+
         document.getElementById('Gifmove').style.right = ((cenwidth - (penny / window.innerHeight)) * 100) + 40 +'%';
-        document.getElementById('Gifmove2').style.top = ((cenwidth - (penny / window.innerHeight)) * 100) + 50 +'%';
-        document.getElementById('Gifmove3').style.top = (-(cenwidth - (penny / window.innerHeight)) * 100) + 60 +'%';
+        document.getElementById('Gifmove2').style.top = ((cenwidth - (penny / window.innerHeight)) * 100) + 50 - orientv +'%';
+        document.getElementById('Gifmove3').style.top = (-(cenwidth - (penny / window.innerHeight)) * 100) + 60 - orientv2 +'%';
     
       }
   });
+
 
   setInterval(freedom,400);
   let Gifopt = 1;

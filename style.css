@@ -117,12 +117,12 @@ overflow: hidden;
 .backmovement {
   background-image: url("source/Bart2.svg");
   background-size: contain;
-  animation: move 150s linear infinite;
+  animation: move 50s linear infinite;
 }
 .backmovement2 {
   background-image: url("source/Bart2.svg");
   background-size: contain;
-  animation: move2 150s linear infinite;
+  animation: move2 50s linear infinite;
 }
 
 .background {
@@ -216,6 +216,22 @@ overflow: hidden;
   height: 25vh;
   right: 5vw;
 }
+.gifpos3{
+  position: relative;
+  height: 25vh;
+  right: 5vw;
+}
+.gifpos2{
+  position: relative;
+  font-family: "VCROSDMono";
+  font-size: 4vw;
+  opacity: 0;
+  
+  -moz-transition: all 400ms;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
 .gifposab {
   position: absolute;
   height: 50%;
@@ -234,17 +250,8 @@ overflow: hidden;
   overflow: hidden;
   z-index: 6;
 }
-.gifpos2{
-  position: relative;
-  font-family: "VCROSDMono";
-  font-size: 4vw;
-  opacity: 0;
-  
-  -moz-transition: all 400ms;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
 
-}
+
 .gifposab3 {
   position: absolute;
   height: 43%;
@@ -308,20 +315,86 @@ overflow: hidden;
   overflow: hidden;
 }
 
+.secondpagefonts{
+  position: relative;
+  font-family: "GothamSSm-XLight";
+  font-size: 12vw;
+  z-index: 1;
+}
+.secondpagemnpos{
+  position: absolute;
+  bottom: 20%;
+}
+
 @keyframes move {
   from {
-    background-position: -3840px 100%, 0 0;
+    background-position: -1000mm 100%, 0 0;
   }
   to {
-    background-position: 0 100%;
+    background-position: 0mm 100%;
   }
 }
 @keyframes move2 {
   from {
-    background-position: 3840px 100%, 0 0;
+    background-position: 1000mm 100%, 0 0;
   }
   to {
-    background-position: 0 100%;
+    background-position: 0mm 100%;
   }
 }
 
+@media (orientation: landscape) { 
+  .secondpagecon2 {
+    position: relative;
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+    display: inline-block;
+}
+.secondpagefonts {
+  position: relative;
+  font-family: "GothamSSm-XLight";
+  font-size: 6vw;
+  z-index: 2;
+}
+.gifpos {
+  position: relative;
+  height: 50vh;
+  right: 5vw;
+}
+.gifposab {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  top: 5%;
+  right: 40%;
+  overflow: hidden;
+  z-index: 5;
+}
+.gifpos3 {
+  position: relative;
+  height: 85vh;
+  right: 5vw;
+  top: -44%;
+}
+.gifposab3 {
+  position: absolute;
+  height: 60%;
+  width: 50%;
+  top: 60%;
+  right: 27%;
+  overflow: hidden;
+  z-index: 4;
+}
+.backmovement {
+  background-image: url("source/Bart2.svg");
+  background-size: contain;
+  animation: move 100s linear infinite;
+}
+.backmovement2 {
+  background-image: url("source/Bart2.svg");
+  background-size: contain;
+  animation: move2 100s linear infinite;
+}
+
+}
